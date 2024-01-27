@@ -4,3 +4,7 @@ artifacts/
 build/
 # Aiken's default documentation export
 docs/
+
+me.addr
+me.sk
+plutus.json
