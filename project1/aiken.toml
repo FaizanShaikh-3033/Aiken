@@ -1,0 +1,14 @@
+name = "faizan/project1"
+version = "0.0.0"
+license = "Apache-2.0"
+description = "Aiken contracts for project 'faizan/project1'"
+
+[repository]
+user = "faizan"
+project = "project1"
+platform = "github"
+
+[[dependencies]]
+name = "aiken-lang/stdlib"
+version = "1.7.0"
+source = "github"

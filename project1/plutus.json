@@ -1,0 +1,122 @@
+{
+  "preamble": {
+    "title": "faizan/project1",
+    "description": "Aiken contracts for project 'faizan/project1'",
+    "version": "0.0.0",
+    "plutusVersion": "v2",
+    "compiler": {
+      "name": "Aiken",
+      "version": "v1.0.21-alpha+4b04517"
+    },
+    "license": "Apache-2.0"
+  },
+  "validators": [
+    {
+      "title": "hello.hello_world",
+      "datum": {
+        "title": "datum",
+        "schema": {
+          "$ref": "#/definitions/hello~1Datum"
+        }
+      },
+      "redeemer": {
+        "title": "redeemer",
+        "schema": {
+          "$ref": "#/definitions/hello~1Redeemer"
+        }
+      },
+      "compiledCode": "58f2010000323232323232323222232325333008323232533300b002100114a06644646600200200644a66602200229404c8c94ccc040cdc78010028a511330040040013014002375c60240026eb0c038c03cc03cc03cc03cc03cc03cc03cc03cc020c008c020014dd71801180400399b8f375c6002600e00a91010d48656c6c6f2c20576f726c6421002300d00114984d958c94ccc020cdc3a400000226464a66601a601e0042930b1bae300d00130060041630060033253330073370e900000089919299980618070010a4c2c6eb8c030004c01401058c01400c8c014dd5000918019baa0015734aae7555cf2ab9f5742ae881",
+      "hash": "6fb13cf9efdbe986e784d1983b21d3fb90231c1745925f536a820fb4"
+    },
+    {
+      "title": "swap.simple_lock",
+      "datum": {
+        "title": "datum",
+        "schema": {
+          "$ref": "#/definitions/swap~1Datum"
+        }
+      },
+      "redeemer": {
+        "title": "redeemer",
+        "schema": {
+          "$ref": "#/definitions/swap~1Redeemer"
+        }
+      },
+      "compiledCode": "590101010000323232323232323222232325333008323232533300b002100114a0664464646600200200444a66602400229404c8c94ccc044cdc78010030a511330040040013015002375c60260026eb0c040c044c044c044c044c044c044c044c044c028008c008c020014dd718071807980400399b8f375c6002600e00a9110d436c61696d2052657175657374002300d00114984d958c94ccc020cdc3a400000226464a66601a601e0042930b1bae300d00130060041630060033253330073370e9000000899191919299980718080010a4c2c6eb8c038004c038008dd7180600098028020b1802801918029baa001230033754002ae6955ceaab9e5573eae855d101",
+      "hash": "2fdae9054c961ee8dd68e35782e404729f25fa2485406d225e03988c"
+    }
+  ],
+  "definitions": {
+    "ByteArray": {
+      "dataType": "bytes"
+    },
+    "hello/Datum": {
+      "title": "Datum",
+      "anyOf": [
+        {
+          "title": "Datum",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": [
+            {
+              "title": "owner",
+              "$ref": "#/definitions/ByteArray"
+            }
+          ]
+        }
+      ]
+    },
+    "hello/Redeemer": {
+      "title": "Redeemer",
+      "anyOf": [
+        {
+          "title": "Redeemer",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": [
+            {
+              "title": "msg",
+              "$ref": "#/definitions/ByteArray"
+            }
+          ]
+        }
+      ]
+    },
+    "swap/Datum": {
+      "title": "Datum",
+      "anyOf": [
+        {
+          "title": "Datum",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": [
+            {
+              "title": "owner",
+              "$ref": "#/definitions/ByteArray"
+            },
+            {
+              "title": "beneficiary",
+              "$ref": "#/definitions/ByteArray"
+            }
+          ]
+        }
+      ]
+    },
+    "swap/Redeemer": {
+      "title": "Redeemer",
+      "anyOf": [
+        {
+          "title": "Redeemer",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": [
+            {
+              "title": "msg",
+              "$ref": "#/definitions/ByteArray"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
